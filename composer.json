@@ -1,0 +1,35 @@
+{
+    "name": "aedart/athenaeum-utils",
+    "description": "Offers a few utility components that are used by the Athenaeum packages",
+    "keywords": ["Athenaeum", "Utilities", "Array", "Json", "Math", "Function", "Version"],
+    "homepage": "https://aedart.github.io/athenaeum/",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alin Eugen Deac",
+            "email": "aedart@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "composer-runtime-api": "^2.0.0",
+        "aedart/athenaeum-contracts": "6.x-dev",
+        "illuminate/support": "v9.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aedart\\Utils\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "6.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
