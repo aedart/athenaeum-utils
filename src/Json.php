@@ -62,20 +62,18 @@ class Json
     /**
      * Determine if given value is a valid json encoded string
      *
-     * @link https://www.php.net/manual/en/function.json-validate.php
-     *
-     * @param mixed $value
-     * @param int $depth [optional] Recursion depth
-     * @param int $options [optional] Flags
+     * @param  mixed  $value
      *
      * @return bool False if not a string or if invalid encoded json
      */
-    public static function isValid(mixed $value, int $depth = 512, int $options = 0): bool
+    public static function isValid(mixed $value): bool
     {
         if (!is_string($value)) {
             return false;
         }
 
-        return json_validate($value, $depth, $options);
+        @json_decode($value);
+
+        return json_last_error() === JSON_ERROR_NONE;
     }
 }
